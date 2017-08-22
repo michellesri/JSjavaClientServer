@@ -8,3 +8,4 @@ const server = http.createServer((req, res) => {
   console.log('req.url: ', req.url);
   var myUrl = url.parse(req.url);
   var params = querystring.parse(myUrl.query);
+  if (req.method === 'POST' && myUrl.pathname === '/startTest') {
