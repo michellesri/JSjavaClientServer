@@ -12,3 +12,6 @@ const server = http.createServer((req, res) => {
   } else if (req.method === 'GET' && myUrl.pathname === '/testStatus') {
   } else if (req.method === 'GET' && myUrl.pathname === '/testResults') {
   } else if (req.method === 'GET' && myUrl.pathname === '/allTests') {
+  } else {
+    res.write('Invalid request');
+    res.end();
