@@ -19,3 +19,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
+  console.log('server currently listening on', server.address().port);
+
