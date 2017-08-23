@@ -15,3 +15,7 @@ const server = http.createServer((req, res) => {
   } else {
     res.write('Invalid request');
     res.end();
+  }
+});
+
+server.listen(port, () => {
