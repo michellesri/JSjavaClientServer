@@ -20,4 +20,8 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, () => {
   console.log('server currently listening on', server.address().port);
-
+  setInterval(function() {
+    tests = {};
+    persistTests();
+  }, 24 * 60 * 60 * 1000);
+});
