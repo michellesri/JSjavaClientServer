@@ -28,5 +28,7 @@ server.listen(port, () => {
 
 function persistTests() {
   fs.writeFile('alltests.txt', JSON.stringify(tests), function(err) {
-
+    if(err) {
+      return console.log(err);
+    }
 }
