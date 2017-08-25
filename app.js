@@ -38,3 +38,4 @@ function persistTests() {
 function processStartTest(req, res) {
   var id = guid();
   req.on('data', function(chunk) {
+    var siteData = {};
