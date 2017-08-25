@@ -36,3 +36,4 @@ function persistTests() {
 }
 
 function processStartTest(req, res) {
+  var id = guid();
