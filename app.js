@@ -34,3 +34,5 @@ function persistTests() {
     console.log('Persisted allTests.txt!');
   });
 }
+
+function processStartTest(req, res) {
