@@ -4,6 +4,8 @@ const querystring = require('querystring');
 const fs = require('fs');
 const port = process.env.PORT || 8080;
 
+var tests = {};
+
 const server = http.createServer((req, res) => {
   console.log('req.url: ', req.url);
   var myUrl = url.parse(req.url);
@@ -39,3 +41,13 @@ function processStartTest(req, res) {
   var id = guid();
   req.on('data', function(chunk) {
     var siteData = {};
+    tests[id] = {
+      status: 'started',
+      data: siteData
+    };
+
+
+
+
+
+
