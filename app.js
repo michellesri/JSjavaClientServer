@@ -46,7 +46,8 @@ function processStartTest(req, res) {
       data: siteData
     };
     var jsonData = JSON.parse(chunk);
-
+    var iterations = jsonData.iterations;
+    var numOutstandingRequests = iterations * jsonData.sitesToTest.length;
 
 
 
