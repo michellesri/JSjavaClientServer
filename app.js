@@ -45,6 +45,8 @@ function processStartTest(req, res) {
       status: 'started',
       data: siteData
     };
+    var jsonData = JSON.parse(chunk);
+
 
 
 
