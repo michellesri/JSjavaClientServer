@@ -64,6 +64,8 @@ function processStartTest(req, res) {
             http.get(url, function() {
               //time it took for http get to get a response
               siteData[url].durations.push(new Date().getTime() - startTime);
+              numOutstandingRequests--;
+
 
 
 
