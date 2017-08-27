@@ -62,6 +62,8 @@ function processStartTest(req, res) {
           var startTime = new Date().getTime();
           try {
             http.get(url, function() {
+              //time it took for http get to get a response
+              siteData[url].durations.push(new Date().getTime() - startTime);
 
 
 
