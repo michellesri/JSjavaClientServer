@@ -54,6 +54,8 @@ function processStartTest(req, res) {
         startTime: new Date().getTime(),
         durations: [],
         numRemainingRequests: iterations,
+        iterations: iterations
+      };
 
 
 
