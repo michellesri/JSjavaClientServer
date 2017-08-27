@@ -52,6 +52,8 @@ function processStartTest(req, res) {
       var siteToTest = jsonData.sitesToTest[i];
       siteData[siteToTest] = {
         startTime: new Date().getTime(),
+        durations: [],
+        numRemainingRequests: iterations,
 
 
 
