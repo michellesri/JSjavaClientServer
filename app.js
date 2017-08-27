@@ -60,6 +60,8 @@ function processStartTest(req, res) {
         (function(url) {
           //take note of start time
           var startTime = new Date().getTime();
+          try {
+            http.get(url, function() {
 
 
 
