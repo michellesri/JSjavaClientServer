@@ -56,6 +56,8 @@ function processStartTest(req, res) {
         numRemainingRequests: iterations,
         iterations: iterations
       };
+      for (var it = 0; it < iterations; it++) {
+
 
 
 
