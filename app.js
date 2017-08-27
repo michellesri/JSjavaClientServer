@@ -57,6 +57,9 @@ function processStartTest(req, res) {
         iterations: iterations
       };
       for (var it = 0; it < iterations; it++) {
+        (function(url) {
+          //take note of start time
+          var startTime = new Date().getTime();
 
 
 
