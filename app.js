@@ -65,7 +65,10 @@ function processStartTest(req, res) {
               //time it took for http get to get a response
               siteData[url].durations.push(new Date().getTime() - startTime);
               numOutstandingRequests--;
-
+              if (numOutstandingRequests === 0) {
+                tests[id].status = 'finished';
+                persistTests();
+              }
 
 
 
