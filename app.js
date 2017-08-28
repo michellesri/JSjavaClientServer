@@ -69,6 +69,8 @@ function processStartTest(req, res) {
                 tests[id].status = 'finished';
                 persistTests();
               }
+              siteData[url].numRemainingRequests--;
+
 
 
 
