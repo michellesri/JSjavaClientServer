@@ -70,7 +70,11 @@ function processStartTest(req, res) {
                 persistTests();
               }
               siteData[url].numRemainingRequests--;
-
+              if (siteData[url].numRemainingRequests === 0) {
+                siteData[url].endTime = new Date().getTime();
+              }
+            }).on('error', function() {
+              console.log('GET request error for: ', url);
 
 
 
