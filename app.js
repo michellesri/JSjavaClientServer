@@ -75,6 +75,11 @@ function processStartTest(req, res) {
               }
             }).on('error', function() {
               console.log('GET request error for: ', url);
+            });
+          } catch (e) {
+          console.log('Error happened when processing ' + url +
+          ' with message: ' + e.message);
+          }
 
 
 
