@@ -80,7 +80,9 @@ function processStartTest(req, res) {
           console.log('Error happened when processing ' + url +
           ' with message: ' + e.message);
           }
-
+        })(siteToTest);
+      }
+    }
 
 
 
