@@ -83,6 +83,9 @@ function processStartTest(req, res) {
         })(siteToTest);
       }
     }
+    
+    var result = {
+
 
 
 
