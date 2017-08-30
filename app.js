@@ -88,6 +88,11 @@ function processStartTest(req, res) {
       testHandle: id,
       status: tests[id].status
     };
+  
+    res.write(JSON.stringify(result));
+    res.end();
+  });
+}
 
 
 
