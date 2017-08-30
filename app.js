@@ -85,7 +85,9 @@ function processStartTest(req, res) {
     }
     
     var result = {
-
+      testHandle: id,
+      status: tests[id].status
+    };
 
 
 
