@@ -14,3 +14,5 @@ import org.json.JSONObject;
 
 public class client {
   private static String startTest(List<String> sitesToTest, int iterations) {
+    try {
+			URL url = new URL("http://localhost:8080/startTest");
