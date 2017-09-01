@@ -1,0 +1,13 @@
+{
+  "name": "clientserver",
+  "version": "1.0.0",
+  "description": "client server in java and javascript / node",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "Michelle Sri",
+  "license": "ISC",
+  "dependencies": {}
+}
