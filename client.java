@@ -20,3 +20,4 @@ public class client {
       conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
       conn.setRequestProperty("Content-Type", "application/json");
+      OutputStream os = conn.getOutputStream();
