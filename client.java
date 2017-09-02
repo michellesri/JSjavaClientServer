@@ -17,3 +17,5 @@ public class client {
     try {
 			URL url = new URL("http://localhost:8080/startTest");
       HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+      conn.setDoOutput(true);
+			conn.setRequestMethod("POST");
