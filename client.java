@@ -23,3 +23,5 @@ public class client {
       OutputStream os = conn.getOutputStream();
 
       JSONObject data = new JSONObject();
+      data.put("sitesToTest", sitesToTest);
+			data.put("iterations", iterations);
