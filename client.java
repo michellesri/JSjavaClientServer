@@ -25,3 +25,6 @@ public class client {
       JSONObject data = new JSONObject();
       data.put("sitesToTest", sitesToTest);
 			data.put("iterations", iterations);
+      
+      os.write(data.toString().getBytes());
+			os.flush();
