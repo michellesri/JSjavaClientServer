@@ -28,3 +28,5 @@ public class client {
       
       os.write(data.toString().getBytes());
 			os.flush();
+      
+      String response = runRequest(conn);
