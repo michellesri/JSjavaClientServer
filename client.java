@@ -30,3 +30,5 @@ public class client {
 			os.flush();
       
       String response = runRequest(conn);
+      JSONObject jsonObject = new JSONObject(response);
+			return (String) jsonObject.get("testHandle");
