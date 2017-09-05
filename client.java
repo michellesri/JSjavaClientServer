@@ -32,3 +32,9 @@ public class client {
       String response = runRequest(conn);
       JSONObject jsonObject = new JSONObject(response);
 			return (String) jsonObject.get("testHandle");
+    }
+		catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
