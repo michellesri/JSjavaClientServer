@@ -13,26 +13,27 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class client {
-  private static String startTest(List<String> sitesToTest, int iterations) {
-    try {
+	private static String startTest(List<String> sitesToTest, int iterations) {
+		try {
 			URL url = new URL("http://localhost:8080/startTest");
-      HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-      conn.setDoOutput(true);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
-      conn.setRequestProperty("Content-Type", "application/json");
-      OutputStream os = conn.getOutputStream();
+			conn.setRequestProperty("Content-Type", "application/json");
+			OutputStream os = conn.getOutputStream();
 
-      JSONObject data = new JSONObject();
-      data.put("sitesToTest", sitesToTest);
+			JSONObject data = new JSONObject();
+			data.put("sitesToTest", sitesToTest);
 			data.put("iterations", iterations);
-      
-      os.write(data.toString().getBytes());
+
+			os.write(data.toString().getBytes());
 			os.flush();
-      
-      String response = runRequest(conn);
-      JSONObject jsonObject = new JSONObject(response);
+
+			String response = runRequest(conn);
+
+			JSONObject jsonObject = new JSONObject(response);
 			return (String) jsonObject.get("testHandle");
-    }
+		}
 		catch (Exception e) {
 			e.printStackTrace();
 			return null;
